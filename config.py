@@ -5,7 +5,7 @@ import subprocess
 import re
 
 if __name__ == "__main__":
-    p = subprocess.Popen("find src/ -type f -name '*.etpl'", stdout=subprocess.PIPE,
+    p = subprocess.Popen("find .  -type f -name '*.etpl'", stdout=subprocess.PIPE,
                          shell=True)
     output, err = p.communicate()
     if len(output) == 0:
@@ -33,7 +33,7 @@ if __name__ == "__main__":
         file_handle.close()
     for file in file_list:
         p = subprocess.Popen('''
-                     for file in $(find src/ -type f -name "*.etpl");do
+                     for file in $(find .  -type f -name "*.etpl");do
                         mv $file ${file%.*}
                      done''', stdout=subprocess.PIPE, shell=True)
         out, err = p.communicate()
