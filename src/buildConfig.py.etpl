@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import os
 server = "{{ _ .server }}"
 if __name__ == "__main__":
     print server
