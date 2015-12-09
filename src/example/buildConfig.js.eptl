@@ -1,0 +1,2 @@
+var env = "{ . env alpha}";
+console.log(env);
