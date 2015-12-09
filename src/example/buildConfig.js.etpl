@@ -1,2 +1,2 @@
-var env = "{ . env alpha}";
+var env = "{{ _ .env alpha}}";
 console.log(env);
